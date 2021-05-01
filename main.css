@@ -1,0 +1,364 @@
+html {
+   box-sizing: border-box;
+   font-size: 16px;
+ }
+ 
+ *, *:before, *:after {
+   box-sizing: inherit;
+ }
+ 
+ 
+ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+   margin: 0;
+   padding: 0;
+   font-weight: normal;
+   font-family: sans-serif;
+   width: 100%;
+   overflow-wrap: break-word;
+   word-wrap: break-word;
+   color: black;
+ }
+ 
+ a {
+    text-decoration: none;
+    border-radius: .5rem;
+ }
+ 
+ a:hover{
+   box-shadow: 0 4px 2px -2px rgba(0,0,0,0.2);
+ }
+
+ ol, ul {
+   list-style: none;
+ }
+ 
+
+
+
+
+ .rightnav a {
+   padding: .5rem 3rem;
+   font-weight: bold;
+   font-family: sans-serif;
+   color: #6054a0;
+ }
+
+ 
+
+
+ .navbar {
+   display: flex;
+   justify-content: space-between;
+   height: 3.5rem;
+   width: 100%;
+   padding: 0% 5%;
+   align-items: center;
+   position: fixed;
+   z-index: 69; /*nice*/
+   background-color: white;
+   border-bottom: #cdcae3 1px solid;
+ }
+
+ .rightnav{
+    display: flex;
+    align-items: center;
+ }
+
+ .banner {
+   padding:5% 7% 5% 7%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #e9f1e4; 
+   
+ }
+
+ .banner img {
+   max-width: 100%;
+   /*min-width: 69%;*/
+   height: auto;
+   margin: auto;
+ }
+
+ .banner__text{
+   flex: 0 1 50%;
+   padding: 12% 5%;
+   position: relative;
+ }
+
+ .banner__text::before{
+   content: "";
+   background-image: url("images/grow-unknown-logo.png");
+   background-size: contain;
+   background-repeat: no-repeat;
+   position: absolute;
+   top: 8%;
+   right: 0px;
+   bottom: 0px;
+   left: 7%;
+   opacity:0.15;
+   z-index: 0;
+ }
+
+ .banner__text p{
+    position: relative;
+ }
+
+ .banner__image{
+   flex: 0 1 50%;
+  
+ 
+ }
+
+ .banner__image img{
+    display: block;
+    margin: auto;
+   
+ }
+
+ #getStarted {
+   background-color: #6054a0;
+   color: white;
+   /*border-radius: .5rem; adding to all a*/
+   
+ }
+
+ #getStarted:hover{
+  /* box-shadow: 0px 4x 6px 10px rgba(0,0,0,0.2);*/
+   background-color: white;
+   color: #6054a0;
+   transition: all .2s linear 0s;
+ } 
+
+ #getStartedBig{
+    background-color: #6054a0;
+    color: white;
+    /*border-radius: .5rem; adding to all a*/
+    font-size: 2rem;
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /*box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);*/
+   }
+  
+
+ #growWithUs{
+    font-size: 5rem;
+    position: relative;
+ }
+
+ #hamburger {
+    position: absolute;
+    top: .33rem;
+    right: .33rem;
+    display: none;
+    /*align-self: center; didn't work*/
+    margin-top: .4rem;
+    
+ }
+
+ #line1, #line2, #line3 {
+    width: 1.7rem;
+    height:.2rem;
+    background-color: #6054a0;
+    margin: .33rem 0;
+ }
+
+ #toggle {
+   display: block;
+   width: 2rem;
+   height: 2rem;
+   position: absolute;
+   top: .20rem;
+   right: .15rem;
+   display: none;
+   padding: 0;
+   cursor: pointer;
+   opacity: 0;
+   z-index: 2;
+ }   
+
+ #toggleMenu{
+   padding: 2rem 1rem;
+   position: absolute;
+   width: 9rem;
+   top: 3rem;
+   right:-10rem;
+   background-color: white;
+   transition: right 0.3s ease;
+   display: none;
+ }
+
+
+
+ .navbar input:checked ~ ul {
+    right: 0 !important;
+    
+ }
+
+ .modalWrapper{
+   position: fixed;
+   bottom: 1rem;
+   left: -30rem;
+   /*transition: left 1s ease-out 0.5s;*/
+   animation: modalMove 3s ease-out .5s 1 normal;
+   animation-fill-mode: forwards
+}
+
+ #modal{
+   /*position: fixed;
+   bottom: 1rem;
+   left: -30rem;*/
+   background-color: #e0f2c2;
+  /* border: #6054a0 1px solid;*/
+   padding: 1rem 1rem;
+   box-shadow: 0 3px 3px 3px rgba(0,0,0,.3);
+ /*  transition: left 1s ease-out 0.5s;
+   animation: modalMove 3s ease-out .5s 1 normal;
+   animation-fill-mode: forwards;*/
+ }
+
+ @keyframes modalMove{
+   from {left: -30rem;}
+   to {left: 3rem;}
+ }
+
+ #getStartedBig:hover{
+   animation: shake .8s linear .2s infinite normal; 
+ }
+
+ @keyframes shake{
+   10% {transform: rotate(2deg);}
+   20% {transform: rotate(0deg);}
+   30% {transform: rotate(-2deg);}
+   40% {transform: rotate(0deg);}
+   50% {transform: rotate(2deg);}
+   60% {transform: rotate(0deg);}
+   70% {transform: rotate(-2deg);}
+   80% {transform: rotate(0deg);}
+   90% {transform: rotate(0deg);}
+   100%{transform: rotate(0deg);} 
+
+
+}
+
+ #closeModal{
+    float: right;
+    position:relative;
+ }
+
+ #hiddenModal{
+   position: absolute;
+   top:.4rem;
+   right:0rem;
+   cursor: pointer;
+   height: 2rem;
+   width: 2rem;
+   opacity: 0;
+   z-index: 2;
+}
+
+#modalImage{
+float: right;
+position: relative;
+bottom: 1rem;
+padding-left: .5rem
+}
+
+.modalWrapper input:checked ~ div {
+   display: none;
+}
+
+ .footer{
+   display: flex; 
+   padding: 3% 20%;
+   background-color: white;
+   justify-content: space-between;
+   border-top: #cdcae3 1px solid;
+   border-bottom: #cdcae3 1px solid;
+ }
+
+ .footer li{
+   padding-bottom: .5rem;
+ }
+
+ .footer h2{
+   color: #6054a0;
+   font-size: 16px;
+ }
+
+ .footer a{
+    color: black;
+    font-size: 14px;
+ }
+
+ .socialMedia{
+   background-color: #6054a0;
+   border-radius: .5rem;
+ } 
+
+ .socialMedia a:hover{
+   
+ }
+
+ .connect li{
+   display: inline-block;
+   padding: .5rem .5rem; 
+ }  
+
+ .company, .products{
+    margin-right: 1rem;
+ }
+
+ .footer img{
+  /*  display: inline-block; dont need because default for img. just had to change footer li to inline-block instead of inline*/
+  width:33px;
+ }
+
+ .copyrightEtc{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: .5rem 0;
+
+ }
+
+
+/*.payments{
+
+} */
+
+ @media screen and (max-width: 792px){
+    
+   .banner {
+      flex-wrap: wrap;
+   }
+
+   .banner__image{
+      flex: 1 0 100%;
+      margin-top: 15%;
+   }
+
+   .banner__text{
+      flex: 2 0 100%;
+     /* margin-top: 5%;*/
+   }
+
+   #hamburger{
+      display: inline-block;
+   }
+
+   .rightnav{
+      display: none;
+   }
+
+   #toggle{
+      display: inline-block;
+   }
+
+   #toggleMenu{
+      display: inline-block;
+   }
+ }
+
