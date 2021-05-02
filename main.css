@@ -65,7 +65,7 @@ html {
  }
 
  .banner {
-   padding:5% 7% 5% 7%;
+   padding:1% 7% 1% 7%;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -285,7 +285,7 @@ padding-left: .5rem
 
  .footer h2{
    color: #6054a0;
-   font-size: 16px;
+   font-size: 18px;
  }
 
  .footer a{
@@ -298,10 +298,6 @@ padding-left: .5rem
    border-radius: .5rem;
  } 
 
- .socialMedia a:hover{
-   
- }
-
  .connect li{
    display: inline-block;
    padding: .5rem .5rem; 
@@ -310,6 +306,10 @@ padding-left: .5rem
  .company, .products{
     margin-right: 1rem;
  }
+
+/* .company, .products, .connect{
+   font-size: 4rem;        just increased spacing instead of font size for some reason
+ }*/
 
  .footer img{
   /*  display: inline-block; dont need because default for img. just had to change footer li to inline-block instead of inline*/
